@@ -12,11 +12,14 @@
 
 
     <!-- New Booking Section -->
+    <img class="Ad" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/467197313_954129743415325_8985905353057973057_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeGYKSxg061wy9MY-MMmtADP5sw6WVMdtCHmzDpZUx20IYb-nvpTC3l7q17Xud4ZUxkv2WecV-aXXMjw3wQ3icqX&_nc_ohc=pXP_gYQ6AMMQ7kNvgFcmU4Q&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AYA6fO9B6CpsyzEWHXcAhAK&oh=00_AYD5JYX2f0OMT8FmY4nlCFbtm0iFsLRaroPmKmEMcJTO4A&oe=67915502" alt="">
     <div class="hero">
         <h1>ยินดีต้อนรับสู่ งานเกษตรมทส</h1>
         <p>Discover amazing deals and services designed just for you! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sit dolores ab incidunt, labore quidem mollitia maiores! Optio aliquid, dicta consequatur, repellendus at distinctio et illo quisquam excepturi cum fugiat ratione omnis amet eligendi? Consectetur, sunt libero! Eum, labore tempore, ipsa consectetur earum minus ad sunt optio nobis rerum doloribus!</p>
         <button>Explore Now</button>
     </div>
+
+    <a class="skip-booking" href="#selection1">จองเลย</a>
 
     <div class="services">
         <div class="service-card">
@@ -41,7 +44,7 @@
 
 
 
-    <h2 style="text-align: center;">Shop Booking</h2>
+    <h2 style="text-align: center;" id="selection1">Shop Booking</h2>
     <h4 style="text-align: center;">Booking Status : <span id="status">Not Ready!</span></h4>
     <div id="shop-booking">
         <div class="shop">
@@ -54,30 +57,42 @@
             <img width="500" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/471162408_122199209228036746_4215557970458506955_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFdOzye2kwBnfRddqiGBGIfDatz8EEkE-sNq3PwQSQT66CjveyBuNTBtcCddk0sSKyN4Pc4am_AGZVPMSaJCNYo&_nc_ohc=hcFngOqxkOUQ7kNvgErlczI&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AZi40Q3BDK9GkVukZUWTdmP&oh=00_AYBKVGFLYp6JQi1zWyMZXPGXwZ5yPZs-orjRppYJACmpZg&oe=679111B9" alt="Shop 2" class="shop-image">
             <p>SUT-B2</p>
             <input type="text" id="Store2" placeholder="Enter Shop Name">
-            <button class="btn-book">Book Shop 2</button>
+            <button class="btn-book" id="btnStore2">Book Shop 2</button>
         </div>
         <div class="shop">
             <img width="500" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/471162408_122199209228036746_4215557970458506955_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFdOzye2kwBnfRddqiGBGIfDatz8EEkE-sNq3PwQSQT66CjveyBuNTBtcCddk0sSKyN4Pc4am_AGZVPMSaJCNYo&_nc_ohc=hcFngOqxkOUQ7kNvgErlczI&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AZi40Q3BDK9GkVukZUWTdmP&oh=00_AYBKVGFLYp6JQi1zWyMZXPGXwZ5yPZs-orjRppYJACmpZg&oe=679111B9" alt="Shop 3" class="shop-image">
             <p>SUT-B3</p>
             <input type="text" id="Store3" placeholder="Enter Shop Name">
-            <button class="btn-book">Book Shop 3</button>
+            <button class="btn-book" id="btnStore3">Book Shop 3</button>
         </div>
         <div class="shop">
             <img width="500" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/471162408_122199209228036746_4215557970458506955_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFdOzye2kwBnfRddqiGBGIfDatz8EEkE-sNq3PwQSQT66CjveyBuNTBtcCddk0sSKyN4Pc4am_AGZVPMSaJCNYo&_nc_ohc=hcFngOqxkOUQ7kNvgErlczI&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AZi40Q3BDK9GkVukZUWTdmP&oh=00_AYBKVGFLYp6JQi1zWyMZXPGXwZ5yPZs-orjRppYJACmpZg&oe=679111B9" alt="Shop 4" class="shop-image">
             <p>SUT-B4</p>
             <input type="text" id="Store4" placeholder="Enter Shop Name">
-            <button class="btn-book">Book Shop 4</button>
+            <button class="btn-book" id="btnStore4">Book Shop 4</button>
         </div>
     </div>
 
-    <div class="Check">
-        <h2>🔍 Check Booked Store</h2>
-        <p>Enter the store name below to check its booking status:</p>
-        <div class="input-container">
-            <input id="inputCheckStore" type="text" placeholder="Enter store name...">
-            <button id="CheckStore">Check</button>
+    <div class="groupstatus">
+        <div style="margin: 0 auto;">
+            <div class="Checkbooking">
+                <h2>ผลการจอง</h2>
+                <p>ผลการจองของท่านจะแสดงบริเวณนี้</p>
+                <h3 id="bookingresult">Result will be shown here</h3>
+            </div>
+            <p>จัดทำโดย</p>
+            <p>ENG23 3055 INTRODUCTION TO BLOCKCHAIN TECHNOLOGY 2/2567</p>
+            <p>B6506407 นายนภสินธุ์ ทำดี และ B6526603 นายวันชัย ชูสกุล</p>
         </div>
-        <h3 id="result">Result will be shown here</h3>
+        <div class="Check">
+            <h2>🔍 Check Booked Store</h2>
+            <p>Enter the store name below to check its booking status:</p>
+            <div class="input-container">
+                <input id="inputCheckStore" type="text" placeholder="Enter store name...">
+                <button id="CheckStore">Check</button>
+            </div>
+            <h3 id="result">Result will be shown here</h3>
+        </div>
     </div>
     
 
@@ -253,34 +268,109 @@
 
 
 
-
+        // ร้านที่ 1
         $("#btnStore1").click(function() {
             console.log(currentAccount)
             web3.contract.methods.bookSpace($("#Store1").val())
                 .send({from: currentAccount
                 ,value: web3.utils.toWei("0.00001","ether")}
                 ,function(error,result) {
-                $("#result").html(result);
+                $("#bookingresult").html(result);
             });
             web3.contract.once("SpaceBooked", {}, function(error, event){
                 if (!error) {
                     console.log(event);
-                    $("#result").html("Name: " + event.returnValues.shopName + "<br/>=> Hashed as: " + event.returnValues.hash);
+                    $("#bookingresult").html("Store Name :  " + event.returnValues.shopName + "<br/>Hashed as : " + event.returnValues.hash);
                 }
             });
             web3.contract.once('BookingError', {}, function(error, event){
                 if(!error) {
                     console.log(event);
-                    $("#result").html("Error: " + event.returnValues.shopName + "<br/>Reason " + event.returnValues.reason);
+                    $("#bookingresult").html("Error : " + event.returnValues.shopName + "<br/>Reason " + event.returnValues.reason);
+                }
+            });
+            
+        });
+        // ร้านที่ 2
+        $("#btnStore2").click(function() {
+            console.log(currentAccount)
+            web3.contract.methods.bookSpace($("#Store2").val())
+                .send({from: currentAccount
+                ,value: web3.utils.toWei("0.00001","ether")}
+                ,function(error,result) {
+                $("#bookingresult").html(result);
+            });
+            web3.contract.once("SpaceBooked", {}, function(error, event){
+                if (!error) {
+                    console.log(event);
+                    $("#bookingresult").html("Store Name :  " + event.returnValues.shopName + "<br/>Hashed as : " + event.returnValues.hash);
+                }
+            });
+            web3.contract.once('BookingError', {}, function(error, event){
+                if(!error) {
+                    console.log(event);
+                    $("#bookingresult").html("Error : " + event.returnValues.shopName + "<br/>Reason " + event.returnValues.reason);
+                }
+            });
+            
+        });
+        // ร้านที่ 3
+        $("#btnStore3").click(function() {
+            console.log(currentAccount)
+            web3.contract.methods.bookSpace($("#Store3").val())
+                .send({from: currentAccount
+                ,value: web3.utils.toWei("0.00001","ether")}
+                ,function(error,result) {
+                $("#bookingresult").html(result);
+            });
+            web3.contract.once("SpaceBooked", {}, function(error, event){
+                if (!error) {
+                    console.log(event);
+                    $("#bookingresult").html("Store Name :  " + event.returnValues.shopName + "<br/>Hashed as : " + event.returnValues.hash);
+                }
+            });
+            web3.contract.once('BookingError', {}, function(error, event){
+                if(!error) {
+                    console.log(event);
+                    $("#bookingresult").html("Error : " + event.returnValues.shopName + "<br/>Reason " + event.returnValues.reason);
+                }
+            });
+            
+        });
+        // ร้านที่ 4
+        $("#btnStore4").click(function() {
+            console.log(currentAccount)
+            web3.contract.methods.bookSpace($("#Store4").val())
+                .send({from: currentAccount
+                ,value: web3.utils.toWei("0.00001","ether")}
+                ,function(error,result) {
+                $("#bookingresult").html(result);
+            });
+            web3.contract.once("SpaceBooked", {}, function(error, event){
+                if (!error) {
+                    console.log(event);
+                    $("#bookingresult").html("Store Name :  " + event.returnValues.shopName + "<br/>Hashed as : " + event.returnValues.hash);
+                }
+            });
+            web3.contract.once('BookingError', {}, function(error, event){
+                if(!error) {
+                    console.log(event);
+                    $("#bookingresult").html("Error : " + event.returnValues.shopName + "<br/>Reason " + event.returnValues.reason);
                 }
             });
             
         });
 
+        //เช็คการจอง
         $("#CheckStore").click(function() {
             web3.contract.methods.checkBooking($("#inputCheckStore").val()).call(function(error, result){
                 if(!error) {
-                    $("#result").html(result.toString());
+                    if (result) {
+                        $("#result").html("ร้านค้าชื่อนี้ถูกจองไปแล้ว");
+                        // $("#result").html(result.toString());
+                    }else{
+                        $("#result").html("ร้านค้าชื่อนี้ยังไม่ถูกจอง");
+                    }
                 } else
                     console.error(error);
             });     

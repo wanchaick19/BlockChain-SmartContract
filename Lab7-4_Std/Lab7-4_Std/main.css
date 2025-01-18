@@ -5,9 +5,29 @@ body {
 }
 *{
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 *::selection{
     background-color: #f9994a86;
+}
+
+.Ad {
+    width: 100vw;
+    box-shadow: 0 5px 10px #ccc;
+}
+
+.skip-booking{
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F67C15;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 20px;
+    z-index: 10;
+    box-shadow: 0 0 15px #0000003c;
+
 }
 .container {
     width: 95%;
@@ -200,19 +220,18 @@ button {
 
 
 .hero {
-    background: linear-gradient(111deg, rgba(246,124,21,1) 0%, rgba(255,204,133,1) 100%);
-    color: #fff;
+    color: #000;
     text-align: center;
     padding: 3em 1em;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0.5em 0;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 1em 0;
 }
 
@@ -224,7 +243,7 @@ button {
     padding: 0.8em 2em;
     font-size: 1rem;
     border-radius: 25px;
-    border: 1px solid #fff;
+    border: 1px solid #F67C15;
     cursor: not-allowed;
     transition: 0.3s ease-in-out;
 }
@@ -286,4 +305,29 @@ button {
 
 .service-card button:hover {
     background-color: #cd6612;
+}
+
+
+
+
+.groupstatus{
+    display: flex;
+}
+
+.Checkbooking{
+    margin: 2em auto;
+    border: 1px solid #ccc;
+    border-left: 10px solid #F67C15;
+    width: 800px;
+    height: 200px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+.Checkbooking h2{
+    margin: 0;
+}
+.Checkbooking p{
+    margin: 0;
+    color: #6f6f6f;
 }
