@@ -1,7 +1,10 @@
 body {
-    background-color:#F0F0F0;
-    padding: 2em;
-    font-family: 'Raleway','Source Sans Pro', 'Arial';
+    background-color: #fff;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+::selection{
+    background-color: #f9994a86;
 }
 .container {
     width: 95%;
@@ -27,4 +30,175 @@ button {
     padding:1em;
     background-color:#fff;
     margin: 1em 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#shop-booking {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    margin-top: 2em;
+    padding: 0 20px;
+    margin-bottom: 20%;
+}
+
+.shop {
+    background-color: #fff;
+    padding: 1em;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.shop:hover{
+    background-color: #f67a152e;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.shop input{
+    width: 50%;
+    border-radius: 20px;
+    border: 3px solid #F67C15;
+}
+.shop input:focus{
+    border: 3px solid #F67C15;
+    box-shadow: 0 0 10px #F67C15;
+}
+
+.shop-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px #ccc;
+    animation: image 5s ease-in-out infinite;
+}
+
+@keyframes image {
+    50%{transform: translateY(10px);}
+}
+
+.btn-book {
+    margin: 1em auto;
+    margin-top: 1em;
+    padding: 0.5em 2em;
+    background-color: #F67C15;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-book:hover {
+    background-color: #cd6612;
+    box-shadow: 0 0 10px #cd6612;
+}
+
+
+
+
+
+
+
+
+
+
+.hero {
+    background: linear-gradient(111deg, rgba(246,124,21,1) 0%, rgba(255,204,133,1) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 3em 1em;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0.5em 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 1em 0;
+}
+
+.hero button {
+    margin: 0 auto;
+    background-color: #fff;
+    color: #F67C15;
+    border: none;
+    padding: 0.8em 2em;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    cursor: not-allowed;
+    transition: 0.3s ease-in-out;
+}
+
+.hero button:hover {
+    background-color: #cd6612;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+    background-color: #fff;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    margin: 1em;
+    text-align: center;
+    padding: 1.5em;
+    transition: 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card img {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1em;
+}
+
+.service-card button {
+    background-color: #F67C15;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1.5em;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    cursor: not-allowed;
+}
+
+.service-card button:hover {
+    background-color: #cd6612;
 }
