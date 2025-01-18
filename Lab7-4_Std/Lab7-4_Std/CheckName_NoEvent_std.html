@@ -42,12 +42,16 @@
 
 
     <h2 style="text-align: center;">Shop Booking</h2>
+    <h4 style="text-align: center;">Booking Status : <span id="status">Not Ready!</span></h4>
+    <input id="inputCheckStore" type="text">
+    <button id="CheckStore">Check</button> 
+    <h2 id="result"></h2>
     <div id="shop-booking">
         <div class="shop">
             <img width="500" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/471162408_122199209228036746_4215557970458506955_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFdOzye2kwBnfRddqiGBGIfDatz8EEkE-sNq3PwQSQT66CjveyBuNTBtcCddk0sSKyN4Pc4am_AGZVPMSaJCNYo&_nc_ohc=hcFngOqxkOUQ7kNvgErlczI&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AZi40Q3BDK9GkVukZUWTdmP&oh=00_AYBKVGFLYp6JQi1zWyMZXPGXwZ5yPZs-orjRppYJACmpZg&oe=679111B9" alt="Shop 1" class="shop-image">
             <p>SUT-B1</p>
             <input type="text" id="Store1" placeholder="Enter Shop Name">
-            <button class="btn-book">Book Shop 1</button>
+            <button class="btn-book" id="btnStore1">Book Shop 1</button>
         </div>
         <div class="shop">
             <img width="500" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/471162408_122199209228036746_4215557970458506955_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFdOzye2kwBnfRddqiGBGIfDatz8EEkE-sNq3PwQSQT66CjveyBuNTBtcCddk0sSKyN4Pc4am_AGZVPMSaJCNYo&_nc_ohc=hcFngOqxkOUQ7kNvgErlczI&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AZi40Q3BDK9GkVukZUWTdmP&oh=00_AYBKVGFLYp6JQi1zWyMZXPGXwZ5yPZs-orjRppYJACmpZg&oe=679111B9" alt="Shop 2" class="shop-image">
@@ -77,7 +81,7 @@
 
 
     <!-- ของอาจาร -->
-    <div class="container">
+    <!-- <div class="container">
         <h1>Student Name in Blockchain Class</h1>
         <label class="col-lg-2 control-label">
         Name Registration</label>
@@ -92,12 +96,11 @@
         <label class="col-lg-2 control-label">Status</label>
         <h2 id="result"></h2>
         Status: <span id="status">Loading...</span>
-    </div>
+    </div> -->
 
 
     <!-- script -->
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
     <script>
         
         // ===Connecting to MetaMask===
@@ -107,10 +110,7 @@
 
                 web3 = new Web3(window.ethereum)
                 
-                // ***std***
-                
                 // To request user's account from Metamask
-                // ***std***
                 ethereum
                     .request({ method: 'eth_requestAccounts' })           
                     .then(handleAccountsChanged)
@@ -139,100 +139,96 @@
                 console.log('Please connect to MetaMask.');
             } else if (accounts[0] !== currentAccount) {
                 currentAccount = accounts[0];
-                //***std*** 
-              
             }
         }
 
-        //***std***
         let abi = [
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "text",
-				"type": "string"
-			},
-			{
-				"indexed": false,
-				"internalType": "bytes32",
-				"name": "hash",
-				"type": "bytes32"
-			}
-		],
-		"name": "NameAdded",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "text",
-				"type": "string"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "reason",
-				"type": "string"
-			}
-		],
-		"name": "RegistrationError",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "name",
-				"type": "string"
-			}
-		],
-		"name": "checkName",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "name",
-				"type": "string"
-			}
-		],
-		"name": "registration",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	}
-];
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "string",
+                        "name": "shopName",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "string",
+                        "name": "reason",
+                        "type": "string"
+                    }
+                ],
+                "name": "BookingError",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "string",
+                        "name": "shopName",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "bytes32",
+                        "name": "hash",
+                        "type": "bytes32"
+                    }
+                ],
+                "name": "SpaceBooked",
+                "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "shopName",
+                        "type": "string"
+                    }
+                ],
+                "name": "bookSpace",
+                "outputs": [],
+                "stateMutability": "payable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "shopName",
+                        "type": "string"
+                    }
+                ],
+                "name": "checkBooking",
+                "outputs": [
+                    {
+                        "internalType": "bool",
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ]
         
-        //***std***
         async function loadContract() {
-            return await new web3.eth.Contract(abi, '0x534f77BBf284738437fbFa937CB481980b8391D5');
+            return await new web3.eth.Contract(abi, '0xA47C9ceAB6fB4913Ad30Ad0f62fC27fA8D3F7bAf');
         }
 
         async function load() {
@@ -247,31 +243,34 @@
             console.log(status);
         }
 
-        $("#btnRegistration").click(function() {
+
+
+
+        $("#btnStore1").click(function() {
             console.log(currentAccount)
-            web3.contract.methods.registration($("#document1").val())
+            web3.contract.methods.bookSpace($("#Store1").val())
                 .send({from: currentAccount
                 ,value: web3.utils.toWei("0.00001","ether")}
                 ,function(error,result) {
                 $("#result").html(result);
             });
-            web3.contract.once("NameAdded", {}, function(error, event){
+            web3.contract.once("SpaceBooked", {}, function(error, event){
                 if (!error) {
                     console.log(event);
-                    $("#result").html("Name: " + event.returnValues.text + "<br/>=> Hashed as: " + event.returnValues.hash);
+                    $("#result").html("Name: " + event.returnValues.shopName + "<br/>=> Hashed as: " + event.returnValues.hash);
                 }
             });
-            web3.contract.once('RegistrationError', {}, function(error, event){
+            web3.contract.once('BookingError', {}, function(error, event){
                 if(!error) {
                     console.log(event);
-                    $("#result").html("Error: " + event.returnValues.text + "<br/>Reason " + event.returnValues.reason);
+                    $("#result").html("Error: " + event.returnValues.shopName + "<br/>Reason " + event.returnValues.reason);
                 }
             });
             
         });
 
-        $("#btnCheck").click(function() {
-            web3.contract.methods.checkName($("#document2").val()).call(function(error, result){
+        $("#CheckStore").click(function() {
+            web3.contract.methods.checkBooking($("#inputCheckStore").val()).call(function(error, result){
                 if(!error) {
                     $("#result").html(result.toString());
                 } else
