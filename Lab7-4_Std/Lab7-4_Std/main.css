@@ -3,7 +3,10 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-::selection{
+*{
+    scrollbar-width: none;
+}
+*::selection{
     background-color: #f9994a86;
 }
 .container {
@@ -49,7 +52,7 @@ button {
     gap: 2em;
     margin-top: 2em;
     padding: 0 20px;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
 }
 
 .shop {
@@ -104,6 +107,88 @@ button {
     background-color: #cd6612;
     box-shadow: 0 0 10px #cd6612;
 }
+
+
+
+
+
+
+
+
+
+.Check {
+    background: linear-gradient(135deg, #F67C15, #fdbf8c);
+    color: #fff;
+    padding: 2em;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 2em auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Check h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5em;
+}
+
+.Check p {
+    font-size: 1rem;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+#inputCheckStore {
+    flex: 1;
+    padding: 0.8em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#inputCheckStore:focus {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#CheckStore {
+    background-color: #fff;
+    color: #F67C15;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#CheckStore:hover {
+    background-color: #F67C15;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Check h3 {
+    font-size: 1.2rem;
+    margin-top: 1em;
+    color: #000;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+
 
 
 
