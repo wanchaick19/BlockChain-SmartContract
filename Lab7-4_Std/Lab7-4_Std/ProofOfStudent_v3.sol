@@ -40,10 +40,10 @@ contract ProofOfStudent {
     }
     
     //---check if msg.value != 0.002 ether---
-    if (msg.value != 0.002 ether) {
+    if (msg.value != 0.00001 ether) {
         //---fire the event---
         emit RegistrationError(msg.sender, name, 
-            "Incorrect amount of Ether. 0.002 ether for registration");
+            "Incorrect amount of Ether. 0.00001 ether for registration");
         
         //---refund back to the sender---
         payable(msg.sender).transfer(msg.value);

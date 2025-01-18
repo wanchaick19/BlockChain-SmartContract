@@ -160,7 +160,7 @@
         
         //***std***
         async function loadContract() {
-            return await new web3.eth.Contract(abi, '0xb4f3a48645bac5ed625a3c06a05233f766fa4404');
+            return await new web3.eth.Contract(abi, '0x534f77BBf284738437fbFa937CB481980b8391D5');
         }
 
         async function load() {
@@ -179,7 +179,7 @@
             console.log(currentAccount)
             web3.contract.methods.registration($("#document1").val())
                 .send({from: currentAccount
-                ,value: web3.utils.toWei("0.002","ether")}
+                ,value: web3.utils.toWei("0.00001","ether")}
                 ,function(error,result) {
                 $("#result").html(result);
             });
