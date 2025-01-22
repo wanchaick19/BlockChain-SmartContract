@@ -49,30 +49,36 @@
     <div id="shop-booking">
         <div class="shop">
             <img width="500" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/471162408_122199209228036746_4215557970458506955_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFdOzye2kwBnfRddqiGBGIfDatz8EEkE-sNq3PwQSQT66CjveyBuNTBtcCddk0sSKyN4Pc4am_AGZVPMSaJCNYo&_nc_ohc=hcFngOqxkOUQ7kNvgErlczI&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AZi40Q3BDK9GkVukZUWTdmP&oh=00_AYBKVGFLYp6JQi1zWyMZXPGXwZ5yPZs-orjRppYJACmpZg&oe=679111B9" alt="Shop 1" class="shop-image">
-            <p>SUT-B1</p>
+            <p>โซน หน้าอาคารสุรพัฒน์ 2</p>
             <input type="text" id="Store1" placeholder="Enter Shop Name">
-            <button class="btn-book" id="btnStore1">Book Shop 1</button>
+            <button class="btn-book" id="btnStore1">จองทันที</button>
         </div>
         <div class="shop">
             <img width="500" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/471162408_122199209228036746_4215557970458506955_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFdOzye2kwBnfRddqiGBGIfDatz8EEkE-sNq3PwQSQT66CjveyBuNTBtcCddk0sSKyN4Pc4am_AGZVPMSaJCNYo&_nc_ohc=hcFngOqxkOUQ7kNvgErlczI&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AZi40Q3BDK9GkVukZUWTdmP&oh=00_AYBKVGFLYp6JQi1zWyMZXPGXwZ5yPZs-orjRppYJACmpZg&oe=679111B9" alt="Shop 2" class="shop-image">
-            <p>SUT-B2</p>
+            <p>โซน อาคารสุรนิทัศน์</p>
             <input type="text" id="Store2" placeholder="Enter Shop Name">
-            <button class="btn-book" id="btnStore2">Book Shop 2</button>
+            <button class="btn-book" id="btnStore2">จองทันที</button>
         </div>
         <div class="shop">
             <img width="500" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/471162408_122199209228036746_4215557970458506955_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFdOzye2kwBnfRddqiGBGIfDatz8EEkE-sNq3PwQSQT66CjveyBuNTBtcCddk0sSKyN4Pc4am_AGZVPMSaJCNYo&_nc_ohc=hcFngOqxkOUQ7kNvgErlczI&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AZi40Q3BDK9GkVukZUWTdmP&oh=00_AYBKVGFLYp6JQi1zWyMZXPGXwZ5yPZs-orjRppYJACmpZg&oe=679111B9" alt="Shop 3" class="shop-image">
-            <p>SUT-B3</p>
+            <p>โซน อาคารสุรพัฒน์ 3</p>
             <input type="text" id="Store3" placeholder="Enter Shop Name">
-            <button class="btn-book" id="btnStore3">Book Shop 3</button>
+            <button class="btn-book" id="btnStore3">จองทันที</button>
         </div>
         <div class="shop">
             <img width="500" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/471162408_122199209228036746_4215557970458506955_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFdOzye2kwBnfRddqiGBGIfDatz8EEkE-sNq3PwQSQT66CjveyBuNTBtcCddk0sSKyN4Pc4am_AGZVPMSaJCNYo&_nc_ohc=hcFngOqxkOUQ7kNvgErlczI&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AZi40Q3BDK9GkVukZUWTdmP&oh=00_AYBKVGFLYp6JQi1zWyMZXPGXwZ5yPZs-orjRppYJACmpZg&oe=679111B9" alt="Shop 4" class="shop-image">
-            <p>SUT-B4</p>
+            <p>โซน หอสุรนภา Suranapa Tower</p>
             <input type="text" id="Store4" placeholder="Enter Shop Name">
-            <button class="btn-book" id="btnStore4">Book Shop 4</button>
+            <button class="btn-book" id="btnStore4">จองทันที</button>
         </div>
     </div>
-
+    
+    <div class="shop">
+        <p>ยกเลิกการจอง</p>
+        <input type="text" id="CancelStore" placeholder="ชื่อร้านที่ต้องการยกเลิกการจอง">
+        <button class="btn-book" id="btnCancelBooking">ยืนยัน</button>
+        <div id="cancelResult"></div>
+    </div>
     <div class="groupstatus">
         <div style="margin: 0 auto;">
             <div class="Checkbooking">
@@ -183,6 +189,31 @@
                     },
                     {
                         "indexed": false,
+                        "internalType": "bytes32",
+                        "name": "hash",
+                        "type": "bytes32"
+                    }
+                ],
+                "name": "BookingCancelled",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "string",
+                        "name": "shopName",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": false,
                         "internalType": "string",
                         "name": "reason",
                         "type": "string"
@@ -190,6 +221,32 @@
                 ],
                 "name": "BookingError",
                 "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "shopName",
+                        "type": "string"
+                    }
+                ],
+                "name": "bookSpace",
+                "outputs": [],
+                "stateMutability": "payable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "shopName",
+                        "type": "string"
+                    }
+                ],
+                "name": "cancelBooking",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
             },
             {
                 "anonymous": false,
@@ -224,19 +281,6 @@
                         "type": "string"
                     }
                 ],
-                "name": "bookSpace",
-                "outputs": [],
-                "stateMutability": "payable",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "string",
-                        "name": "shopName",
-                        "type": "string"
-                    }
-                ],
                 "name": "checkBooking",
                 "outputs": [
                     {
@@ -251,7 +295,7 @@
         ]
         
         async function loadContract() {
-            return await new web3.eth.Contract(abi, '0xA47C9ceAB6fB4913Ad30Ad0f62fC27fA8D3F7bAf');
+            return await new web3.eth.Contract(abi, '0xE6C10A63713501E7dA75E0Cbe5Fb3e64eACb6895');
         }
 
         async function load() {
@@ -360,6 +404,73 @@
             });
             
         });
+
+
+
+
+
+
+
+        // ยกเลิกการจอง
+        $("#btnCancelBooking").click(function () {
+            const shopName = $("#CancelStore").val(); // ดึงค่าชื่อร้านจาก input
+            if (!shopName) {
+                $("#cancelResult").html("กรุณากรอกชื่อร้านที่ต้องการยกเลิกการจอง");
+                return;
+            }
+
+            console.log(currentAccount);
+            web3.contract.methods.cancelBooking(shopName)
+                .send({ from: currentAccount }, function (error, result) {
+                    if (error) {
+                        console.error(error);
+                        $("#cancelResult").html("เกิดข้อผิดพลาดในการยกเลิกการจอง");
+                    } else {
+                        $("#cancelResult").html("การยกเลิกการจองกำลังดำเนินการ...");
+                    }
+                });
+
+            web3.contract.once("BookingCancelled", {}, function (error, event) {
+                if (!error) {
+                    console.log(event);
+                    $("#cancelResult").html(
+                        "ยกเลิกการจองสำเร็จสำหรับร้านค้า: " + event.returnValues.shopName
+                    );
+                } else {
+                    console.error(error);
+                    $("#cancelResult").html("เกิดข้อผิดพลาดในการยกเลิกการจอง");
+                }
+            });
+
+            web3.contract.once("BookingError", {}, function (error, event) {
+                if (!error) {
+                    console.log(event);
+                    $("#cancelResult").html(
+                        "Error: " + event.returnValues.shopName + "<br/>Reason: " + event.returnValues.reason
+                    );
+                } else {
+                    console.error(error);
+                    $("#cancelResult").html("เกิดข้อผิดพลาดในการยกเลิกการจอง");
+                }
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         //เช็คการจอง
         $("#CheckStore").click(function() {
