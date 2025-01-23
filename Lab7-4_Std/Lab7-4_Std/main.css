@@ -331,3 +331,48 @@ button {
     margin: 0;
     color: #6f6f6f;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    appearance: none;
+    background-image: url('https://img.icons8.com/material-rounded/24/000000/expand-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    outline: none;
+    cursor: pointer;
+    border: 3px solid #F67C15;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  select:focus {
+    border-color: #F67C15;
+    box-shadow: 0 0 5px #F67C15;
+  }
+  select:hover {
+    border-color: #F67C15;
+    box-shadow: 0 0 5px #F67C15;
+  }
+
+  option {
+    padding: 10px;
+  }
