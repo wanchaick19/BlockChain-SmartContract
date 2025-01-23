@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Name in Blockchain Class</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.4/dist/web3.min.js"></script>
+</head>
+<body>
+    <!-- New Booking Section -->
+    <img class="Ad" src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/467197313_954129743415325_8985905353057973057_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeGYKSxg061wy9MY-MMmtADP5sw6WVMdtCHmzDpZUx20IYb-nvpTC3l7q17Xud4ZUxkv2WecV-aXXMjw3wQ3icqX&_nc_ohc=pXP_gYQ6AMMQ7kNvgFcmU4Q&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AYA6fO9B6CpsyzEWHXcAhAK&oh=00_AYD5JYX2f0OMT8FmY4nlCFbtm0iFsLRaroPmKmEMcJTO4A&oe=67915502" alt="">
+
+    <div class="hero">
+        <h1>ยินดีต้อนรับสู่ งานเกษตรมทส</h1>
+        <p>Discover amazing deals and services designed just for you! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <button>Explore Now</button>
+    </div>
+
+    <a class="skip-booking" href="#selection1">จองเลย</a>
+
+    <div class="services">
+        <div class="service-card">
+            <img src="https://scontent.fbkk3-4.fna.fbcdn.net/v/t39.30808-6/472845287_122202128258036746_910605395154881804_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHIPYFbUrSV_MIAVaNlAIFPMGR4hDYmpA4wZHiENiakDqydRE6KYwHTpPWTJwYI0C7iJPakz-9BybaFBoroRzOZ&_nc_ohc=gdYE0PlM5VcQ7kNvgE2NiBc&_nc_zt=23&_nc_ht=scontent.fbkk3-4.fna&_nc_gid=AU17o9QtDjxqNgJ1Zgcbcvd&oh=00_AYAKyk80llaAS3qFaCCblSXSX0uhqppPLz1YegDFOQ4yIQ&oe=67911996" alt="Service 1">
+            <h3>วันเปิดให้บริการ</h3>
+            <p>Professional and reliable services for your business needs.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="service-card">
+            <img src="https://scontent.fbkk3-4.fna.fbcdn.net/v/t39.30808-6/465063836_1084605463677046_5831427156936243828_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHC-4W0LaWD4j-GzrAZi2xPS555U22MpPRLnnlTbYyk9IrJNYUs_BGsZ6hD61WLEdUqke4UK4iAe_WSXzIEc44d&_nc_ohc=8VwM97ExeFcQ7kNvgEmSUpi&_nc_zt=23&_nc_ht=scontent.fbkk3-4.fna&_nc_gid=AH6stz0apT9TdzU_HOrl4n-&oh=00_AYA39dCRO6r-a6CRiSkJvehEVYryi2Z64liOjeiYVqOgOw&oe=67912CE3" alt="Service 2">
+            <h3>น้ำดื่มตรา มทส</h3>
+            <p>High-quality products with affordable prices just for you.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="service-card">
+            <img src="https://scontent.fbkk3-3.fna.fbcdn.net/v/t39.30808-6/471356783_122199307418036746_4775593858362262009_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHznw5FzTgR8VwWmXsuMdMh6CM-H4YHYEfoIz4fhgdgR_-fa2NJTMnYRTLEzAk5Vd_s3q5YNGIjcd53k56KevA1&_nc_ohc=Pzeygc9ob6UQ7kNvgHI7mzj&_nc_zt=23&_nc_ht=scontent.fbkk3-3.fna&_nc_gid=AOcr7GC3mj7_MbJGUdSppPD&oh=00_AYC2s3Ka6Vvok3x9a7lnQoyQ-jFbNUOxLYwaO0NKIgZ62A&oe=67910F03" alt="Service 3">
+            <h3>ประกาศหยุดวันปีใหม่</h3>
+            <p>Get the best support and guidance from our experts.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+
+    <h2 style="text-align: center;" id="selection1">Shop Booking</h2>
+    <h4 style="text-align: center;">Booking Status : <span id="status">Not Ready!</span></h4>
+
+    <div id="shop-booking">
+        <!-- Shops for Booking in 4 Zones -->
+        <div class="shop">
+            <h3>โซน หน้าอาคารสุรพัฒน์ 1</h3>
+            <img width="500" src="shop-image-url.jpg" alt="Shop 1" class="shop-image">
+            <input type="text" id="Store1" placeholder="Enter Shop Name">
+            <button class="btn-book" id="btnStore1" onclick="bookSpace(1, 'หน้าอาคารสุรพัฒน์ 1')">จองทันที</button>
+        </div>
+
+        <div class="shop">
+            <h3>โซน หน้าอาคารสุรพัฒน์ 2</h3>
+            <img width="500" src="shop-image-url.jpg" alt="Shop 2" class="shop-image">
+            <input type="text" id="Store2" placeholder="Enter Shop Name">
+            <button class="btn-book" id="btnStore2" onclick="bookSpace(2, 'หน้าอาคารสุรพัฒน์ 2')">จองทันที</button>
+        </div>
+
+        <div class="shop">
+            <h3>โซน หน้าอาคารสุรพัฒน์ 3</h3>
+            <img width="500" src="shop-image-url.jpg" alt="Shop 3" class="shop-image">
+            <input type="text" id="Store3" placeholder="Enter Shop Name">
+            <button class="btn-book" id="btnStore3" onclick="bookSpace(3, 'หน้าอาคารสุรพัฒน์ 3')">จองทันที</button>
+        </div>
+
+        <div class="shop">
+            <h3>โซน หน้าอาคารสุรพัฒน์ 4</h3>
+            <img width="500" src="shop-image-url.jpg" alt="Shop 4" class="shop-image">
+            <input type="text" id="Store4" placeholder="Enter Shop Name">
+            <button class="btn-book" id="btnStore4" onclick="bookSpace(4, 'หน้าอาคารสุรพัฒน์ 4')">จองทันที</button>
+        </div>
+    </div>
+    
+    <!-- เพิ่มการเลือกโซนในการยกเลิกการจอง -->
+    <div class="shop">
+        <p>ยกเลิกการจอง</p>
+        <input type="text" id="CancelStore" placeholder="ชื่อร้านที่ต้องการยกเลิกการจอง">
+        
+        <!-- เลือกโซน -->
+        <select id="CancelZone">
+            <option value="หน้าอาคารสุรพัฒน์ 1">โซน หน้าอาคารสุรพัฒน์ 1</option>
+            <option value="หน้าอาคารสุรพัฒน์ 2">โซน หน้าอาคารสุรพัฒน์ 2</option>
+            <option value="หน้าอาคารสุรพัฒน์ 3">โซน หน้าอาคารสุรพัฒน์ 3</option>
+            <option value="หน้าอาคารสุรพัฒน์ 4">โซน หน้าอาคารสุรพัฒน์ 4</option>
+        </select>
+        
+        <button class="btn-book" id="btnCancelBooking" onclick="cancelBooking()">ยืนยัน</button>
+        <div id="cancelResult"></div>
+    </div>
+    
+    <div class="groupstatus">
+        <div style="margin: 0 auto;">
+            <div class="Checkbooking">
+                <h2>ผลการจอง</h2>
+                <p>ผลการจองของท่านจะแสดงบริเวณนี้</p>
+                <h3 id="bookingresult">
+                    ผลการตรวจสอบจะปรากฏที่นี่
+                </h3>
+            </div>
+            <p>จัดทำโดย</p>
+            <p>ENG23 3055 INTRODUCTION TO BLOCKCHAIN TECHNOLOGY 2/2567</p>
+            <p>B6506407 นายนภสินธุ์ ทำดี และ B6526603 นายวันชัย ชูสกุล</p>
+        </div>
+        <div class="Check">
+            <h2>🔍 Check Booked Store</h2>
+            <p>Enter the store name and select the zone below to check its booking status:</p>
+            <div class="input-container">
+                <!-- เพิ่ม input สำหรับชื่อร้าน -->
+                <input id="inputCheckStore" type="text" placeholder="Enter store name...">
+        
+                <!-- เพิ่ม dropdown สำหรับเลือกโซน -->
+                <select id="zoneSelect">
+                    <option value="หน้าอาคารสุรพัฒน์ 1">หน้าอาคารสุรพัฒน์ 1</option>
+                    <option value="หน้าอาคารสุรพัฒน์ 2">หน้าอาคารสุรพัฒน์ 2</option>
+                    <option value="หน้าอาคารสุรพัฒน์ 3">หน้าอาคารสุรพัฒน์ 3</option>
+                    <option value="หน้าอาคารสุรพัฒน์ 4">หน้าอาคารสุรพัฒน์ 4</option>
+                    <!-- เพิ่มโซนเพิ่มเติมตามต้องการ -->
+                </select>
+        
+                <!-- ปรับปุ่มให้เรียกใช้ฟังก์ชัน checkBookingStatus() -->
+                <button id="CheckStore" onclick="checkBookingStatus()">Check</button>
+            </div>
+        
+            <!-- แสดงผลลัพธ์การตรวจสอบสถานะการจอง -->
+            <h3 id="result">Result will be shown here</h3>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script>
+        async function loadWeb3() {
+            if (window.ethereum) {
+                window.web3 = new Web3(window.ethereum);
+                try {
+                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    handleAccountsChanged(accounts);
+                } catch (error) {
+                    if (error.code === 4001) {
+                        alert("กรุณาเชื่อมต่อ MetaMask เพื่อดำเนินการต่อ");
+                    } else {
+                        console.error(error);
+                    }
+                }
+            } else {
+                alert("กรุณาติดตั้ง MetaMask เพื่อใช้งานฟีเจอร์นี้");
+            }
+        }
+
+        let currentAccount = null;
+        async function handleAccountsChanged(accounts) {
+            if (accounts.length === 0) {
+                console.log('MetaMask ไม่ได้เชื่อมต่อบัญชี');
+            } else {
+                currentAccount = accounts[0];
+                console.log(`บัญชีที่เชื่อมต่อ: ${currentAccount}`);
+            }
+        }
+
+        async function loadContract() {
+            const abi = [
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "shopName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "zoneName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes32",
+				"name": "hash",
+				"type": "bytes32"
+			}
+		],
+		"name": "BookingCancelled",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "shopName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "zoneName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "reason",
+				"type": "string"
+			}
+		],
+		"name": "BookingError",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "shopName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "zoneName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes32",
+				"name": "hash",
+				"type": "bytes32"
+			}
+		],
+		"name": "SpaceBooked",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "shopName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "zoneName",
+				"type": "string"
+			}
+		],
+		"name": "bookSpace",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "shopName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "zoneName",
+				"type": "string"
+			}
+		],
+		"name": "cancelBooking",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "shopName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "zoneName",
+				"type": "string"
+			}
+		],
+		"name": "checkBooking",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];  // Insert your ABI here
+            const contractAddress = '0x5392f52e9b19e3de4f310dc358da418c360cd172';
+            return new web3.eth.Contract(abi, contractAddress);
+        }
+
+        let contract;
+        async function load() {
+            await loadWeb3();
+            contract = await loadContract();
+            updateStatus('Ready!');
+        }
+
+        function updateStatus(status) {
+            document.getElementById('status').innerText = status;
+        }
+
+        // ฟังก์ชันสำหรับการจอง
+        async function bookSpace(storeId, zone) {
+        const shopName = document.getElementById(`Store${storeId}`).value;
+        if (!shopName) {
+            alert('กรุณาป้อนชื่อร้านที่ต้องการจอง');
+            return;
+        }
+
+        try {
+            const result = await contract.methods.bookSpace(shopName, zone).send({
+                from: currentAccount,
+                value: web3.utils.toWei("0.00001", "ether"),
+            });
+
+            console.log('การจองสำเร็จ', result);
+            alert(`การจองสำเร็จใน ${zone}!`);
+
+            contract.once("SpaceBooked", {}, function (error, event) {
+                if (!error) {
+                    console.log('SpaceBooked Event:', event);
+                    document.getElementById("bookingresult").innerHTML = 
+                        `Store Name: ${event.returnValues.shopName}<br/>` + 
+                        `Zone: ${event.returnValues.zoneName}<br/>` + 
+                        `Hashed as: ${event.returnValues.hash}`;
+                } else {
+                    console.error('Error receiving SpaceBooked event:', error);
+                }
+            });
+
+            contract.events.SpaceBooked({
+                filter: {},
+                fromBlock: 'latest'
+            }, function (error, event) {
+                if (!error) {
+                    console.log('SpaceBooked Event:', event);
+                    document.getElementById("bookingresult").innerHTML = 
+                        `Store Name: ${event.returnValues.shopName}<br/>` + 
+                        `Zone: ${event.returnValues.zoneName}<br/>` + 
+                        `Hashed as: ${event.returnValues.hash}`;
+                } else {
+                    console.error('Error receiving SpaceBooked event:', error);
+                }
+            });
+
+
+        } catch (err) {
+            console.error(err);
+            alert("เกิดข้อผิดพลาดในการจอง");
+        }
+    }
+
+
+        // ฟังก์ชันสำหรับการยกเลิกการจอง
+        async function cancelBooking() {
+    const storeName = document.getElementById("CancelStore").value;
+    const zone = document.getElementById("CancelZone").value; // รับค่าโซน
+    if (!storeName || !zone) {
+        alert("กรุณากรอกชื่อร้านและเลือกโซนที่ต้องการยกเลิกการจอง");
+        return;
+    }
+
+    try {
+        const result = await contract.methods.cancelBooking(storeName, zone).send({ from: currentAccount });
+        console.log(result);
+        document.getElementById("cancelResult").innerHTML = `ยกเลิกการจองร้าน ${storeName} ใน ${zone} สำเร็จ`;
+    } catch (err) {
+        console.error(err);
+        document.getElementById("cancelResult").innerHTML = `เกิดข้อผิดพลาดในการยกเลิกการจองร้าน ${storeName} ใน ${zone}`;
+    }
+}
+
+
+
+    // ฟังก์ชันสำหรับการเช็คสถานะการจอง
+    async function checkBookingStatus() {
+        const storeName = document.getElementById("inputCheckStore").value; // รับชื่อร้านจาก UI
+        const zoneName = document.getElementById("zoneSelect").value; // รับโซนที่เลือกจาก dropdown
+
+        // ตรวจสอบว่าได้กรอกชื่อร้านหรือไม่
+        if (!storeName) {
+            document.getElementById("result").innerHTML = "กรุณากรอกชื่อร้าน";
+            return;
+        }
+
+        try {
+            // เรียกใช้ฟังก์ชัน checkBooking จาก Smart Contract
+            const isBooked = await contract.methods.checkBooking(storeName, zoneName).call();
+
+            if (isBooked) {
+                document.getElementById("result").innerHTML = `พื้นที่ร้าน ${storeName} ในโซน ${zoneName} ถูกจองแล้ว`;
+            } else {
+                document.getElementById("result").innerHTML = `พื้นที่ร้าน ${storeName} ในโซน ${zoneName} ยังไม่ถูกจอง`;
+            }
+        } catch (err) {
+            console.error(err);
+            document.getElementById("result").innerHTML = `เกิดข้อผิดพลาดในการตรวจสอบการจอง`;
+        }
+    }
+
+
+        load();
+    </script>
+</body>
+</html>
